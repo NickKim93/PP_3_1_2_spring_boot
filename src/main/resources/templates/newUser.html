@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>My app</title>
+</head>
+<body>
+<h2>Enter User's Information</h2>
+
+<form action="#" th:action="@{/saveUser}" th:object="${user}" th:method="post">
+    <label th:for="name">Name</label>
+    <input type="text" th:field="*{name}" id="name">
+    </br>
+    <label th:for="surname">Surname</label>
+    <input type="text" th:field="*{surname}" id="surname">
+    </br>
+    <label th:for="salary">Salary</label>
+    <input type="text" th:field="*{salary}" id="salary">
+    </br>
+    <input type="submit" value="Add User">
+</form>
+</body>
+
+</html>
